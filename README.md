@@ -2,10 +2,11 @@ Source code associating the paper
 
 Enabling Compliance Monitoring of Process Execution Engines: The Case of Activiti
 
-to run the code:
-open Netbeans or any other tool
-open the  "Test packages"
-open the "LoanRequestProcessWithEsperTest" class
-right clic on the main test method
-clickk on "Run Focused Test Method"
+•	to run the code:
+o	open Netbeans or any other tool
+o	open the  "Test packages"
+o	open the "LoanRequestProcessWithEsperTest" class
+o	right click on the main test method
+o	click on "Run Focused Test Method"
+
 
