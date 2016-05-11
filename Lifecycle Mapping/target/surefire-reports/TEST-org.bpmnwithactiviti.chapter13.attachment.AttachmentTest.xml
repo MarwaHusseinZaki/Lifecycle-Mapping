@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="org.bpmnwithactiviti.chapter13.attachment.AttachmentTest" time="329.289" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_05\jre\bin"/>
+    <property name="java.vm.version" value="25.5-b02"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Marwa\Documents\NetBeansProjects\org.bpmnwithactiviti_bpmn-examples_jar_1.0_5"/>
+    <property name="java.runtime.version" value="1.8.0_05-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_05\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Marwa\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.1\java\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1256"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_05\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\MiKTeX 2.9\miktex\bin;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\Marwa"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1256"/>
+    <property name="user.name" value="Marwa"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans 8.1\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_05\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_05"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_05\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_05\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_05\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans 8.1\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="org.bpmnwithactiviti.chapter13.attachment.AttachmentTest" name="addAttachment" time="329.288">
+    <error message="
+### Error opening session.  Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+### The error may exist in org/activiti/db/mapping/entity/EventSubscription.xml
+### The error occurred while processing mapper_resultMap[compensateResultMap]
+### Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error opening session.  Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+### The error may exist in org/activiti/db/mapping/entity/EventSubscription.xml
+### The error occurred while processing mapper_resultMap[compensateResultMap]
+### Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:8)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSession(DefaultSqlSessionFactory.java:32)
+	at org.activiti.engine.impl.db.DbSqlSession.&lt;init&gt;(DbSqlSession.java:86)
+	at org.activiti.engine.impl.db.DbSqlSessionFactory.openSession(DbSqlSessionFactory.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.getSession(CommandContext.java:179)
+	at org.activiti.engine.impl.SchemaOperationsProcessEngineBuild.execute(SchemaOperationsProcessEngineBuild.java:25)
+	at org.activiti.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:42)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+	at org.activiti.engine.impl.ProcessEngineImpl.&lt;init&gt;(ProcessEngineImpl.java:77)
+	at org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl.buildProcessEngine(ProcessEngineConfigurationImpl.java:283)
+	at org.activiti.engine.impl.test.TestHelper.getProcessEngine(TestHelper.java:211)
+	at org.activiti.engine.test.ActivitiRule.initializeProcessEngine(ActivitiRule.java:104)
+	at org.activiti.engine.test.ActivitiRule.starting(ActivitiRule.java:96)
+	at org.junit.rules.TestWatchman$1.evaluate(TestWatchman.java:46)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:316)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.SessionRemote.checkClosed(SessionRemote.java:447)
+	at org.h2.engine.SessionRemote.connectServer(SessionRemote.java:326)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:219)
+	at org.h2.engine.SessionRemote.createSession(SessionRemote.java:213)
+	at org.h2.jdbc.JdbcConnection.&lt;init&gt;(JdbcConnection.java:110)
+	at org.h2.jdbc.JdbcConnection.&lt;init&gt;(JdbcConnection.java:94)
+	at org.h2.Driver.connect(Driver.java:58)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:64)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:349)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:55)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:73)
+	... 35 more
+</error>
+    <system-out>05 Feb 2016 08:13:38,307 [main]  INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [activiti.cfg.xml]
+05 Feb 2016 08:16:23,113 [main] ERROR org.activiti.engine.impl.interceptor.CommandContext:121 - Error while closing command context
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error opening session.  Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+### The error may exist in org/activiti/db/mapping/entity/EventSubscription.xml
+### The error occurred while processing mapper_resultMap[compensateResultMap]
+### Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:8)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSession(DefaultSqlSessionFactory.java:32)
+	at org.activiti.engine.impl.db.DbSqlSession.&lt;init&gt;(DbSqlSession.java:86)
+	at org.activiti.engine.impl.db.DbSqlSessionFactory.openSession(DbSqlSessionFactory.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.getSession(CommandContext.java:179)
+	at org.activiti.engine.impl.SchemaOperationsProcessEngineBuild.execute(SchemaOperationsProcessEngineBuild.java:25)
+	at org.activiti.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:42)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+	at org.activiti.engine.impl.ProcessEngineImpl.&lt;init&gt;(ProcessEngineImpl.java:77)
+	at org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl.buildProcessEngine(ProcessEngineConfigurationImpl.java:283)
+	at org.activiti.engine.impl.test.TestHelper.getProcessEngine(TestHelper.java:211)
+	at org.activiti.engine.test.ActivitiRule.initializeProcessEngine(ActivitiRule.java:104)
+	at org.activiti.engine.test.ActivitiRule.starting(ActivitiRule.java:96)
+	at org.junit.rules.TestWatchman$1.evaluate(TestWatchman.java:46)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:316)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.SessionRemote.checkClosed(SessionRemote.java:447)
+	at org.h2.engine.SessionRemote.connectServer(SessionRemote.java:326)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:219)
+	at org.h2.engine.SessionRemote.createSession(SessionRemote.java:213)
+	at org.h2.jdbc.JdbcConnection.&lt;init&gt;(JdbcConnection.java:110)
+	at org.h2.jdbc.JdbcConnection.&lt;init&gt;(JdbcConnection.java:94)
+	at org.h2.Driver.connect(Driver.java:58)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:64)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:349)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:55)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:73)
+	... 35 more
+05 Feb 2016 08:19:07,583 [main]  INFO org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext:95 - Exception during transaction: 
+### Error opening session.  Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+### Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+05 Feb 2016 08:19:07,584 [main] ERROR org.activiti.engine.impl.interceptor.CommandContext:167 - masked exception in command context. for root cause, see below as it will be rethrown later.
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error opening session.  Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+### Cause: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:8)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSession(DefaultSqlSessionFactory.java:32)
+	at org.activiti.engine.impl.db.DbSqlSession.&lt;init&gt;(DbSqlSession.java:86)
+	at org.activiti.engine.impl.db.DbSqlSessionFactory.openSession(DbSqlSessionFactory.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.getSession(CommandContext.java:179)
+	at org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext.getDbSqlSession(StandaloneMybatisTransactionContext.java:77)
+	at org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext.rollback(StandaloneMybatisTransactionContext.java:91)
+	at org.activiti.engine.impl.interceptor.CommandContext.close(CommandContext.java:122)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:49)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+	at org.activiti.engine.impl.ProcessEngineImpl.&lt;init&gt;(ProcessEngineImpl.java:77)
+	at org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl.buildProcessEngine(ProcessEngineConfigurationImpl.java:283)
+	at org.activiti.engine.impl.test.TestHelper.getProcessEngine(TestHelper.java:211)
+	at org.activiti.engine.test.ActivitiRule.initializeProcessEngine(ActivitiRule.java:104)
+	at org.activiti.engine.test.ActivitiRule.starting(ActivitiRule.java:96)
+	at org.junit.rules.TestWatchman$1.evaluate(TestWatchman.java:46)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.h2.jdbc.JdbcSQLException: Connection is broken: &quot;session closed&quot; [90067-132]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:316)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.SessionRemote.checkClosed(SessionRemote.java:447)
+	at org.h2.engine.SessionRemote.connectServer(SessionRemote.java:326)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:219)
+	at org.h2.engine.SessionRemote.createSession(SessionRemote.java:213)
+	at org.h2.jdbc.JdbcConnection.&lt;init&gt;(JdbcConnection.java:110)
+	at org.h2.jdbc.JdbcConnection.&lt;init&gt;(JdbcConnection.java:94)
+	at org.h2.Driver.connect(Driver.java:58)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:64)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:349)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:55)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:73)
+	... 36 more
+</system-out>
+  </testcase>
+</testsuite>

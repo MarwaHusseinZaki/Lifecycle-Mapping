@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="org.bpmnwithactiviti.chapter6.jpa.JPABookTest" time="5.065" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_05\jre\bin"/>
+    <property name="java.vm.version" value="25.5-b02"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Marwa\Documents\NetBeansProjects\org.bpmnwithactiviti_bpmn-examples_jar_1.0_5"/>
+    <property name="java.runtime.version" value="1.8.0_05-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_05\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Marwa\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.1\java\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1256"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_05\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\MiKTeX 2.9\miktex\bin;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\Marwa"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1256"/>
+    <property name="user.name" value="Marwa"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans 8.1\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_05\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_05"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_05\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_05\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_05\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_05\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans 8.1\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="org.bpmnwithactiviti.chapter6.jpa.JPABookTest" name="executeJavaService" time="4.844">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;processEngine&apos;: FactoryBean threw exception on object creation; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:149)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:102)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1414)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:245)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:349)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:973)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:879)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 31 more
+Caused by: java.lang.NullPointerException
+	at org.activiti.engine.impl.cmd.DeployCmd.deploymentsDiffer(DeployCmd.java:72)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:50)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:30)
+	at org.activiti.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:42)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:42)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:130)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:40)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+	at org.activiti.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:46)
+	at org.activiti.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:106)
+	at org.activiti.spring.SpringProcessEngineConfiguration.autoDeployResources(SpringProcessEngineConfiguration.java:142)
+	at org.activiti.spring.SpringProcessEngineConfiguration.buildProcessEngine(SpringProcessEngineConfiguration.java:61)
+	at org.activiti.spring.ProcessEngineFactoryBean.getObject(ProcessEngineFactoryBean.java:56)
+	at org.activiti.spring.ProcessEngineFactoryBean.getObject(ProcessEngineFactoryBean.java:32)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:142)
+	... 51 more
+</error>
+    <system-out>05 Feb 2016 08:19:30,252 [main]  INFO org.springframework.test.context.TestContextManager:185 - @TestExecutionListeners is not present for class [class org.bpmnwithactiviti.chapter6.jpa.JPABookTest]: using defaults.
+05 Feb 2016 08:19:30,258 [main]  INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [chapter6/jpa/jpa-application-context.xml]
+05 Feb 2016 08:19:30,259 [org.subethamail.smtp.server.SMTPServer]  INFO org.subethamail.smtp.server.SMTPServer:427 - SMTP server *:1025 stopped
+05 Feb 2016 08:19:30,379 [main]  INFO org.springframework.context.support.AbstractApplicationContext:456 - Refreshing org.springframework.context.support.GenericApplicationContext@3a2bb026: startup date [Fri Feb 05 08:19:30 PST 2016]; root of context hierarchy
+05 Feb 2016 08:19:30,486 [main]  INFO org.springframework.beans.factory.support.DefaultListableBeanFactory:549 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@31d4b3e8: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,activitiDataSource,persistenceUnitManager,entityManagerFactory,transactionManager,processEngineConfiguration,processEngine,repositoryService,runtimeService,taskService,historyService,managementService,formService,bookService]; root of factory hierarchy
+05 Feb 2016 08:19:30,539 [main]  INFO org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader:207 - jpa-persistence.xml should be located inside META-INF directory; cannot determine persistence unit root URL for class path resource [chapter6/jpa/jpa-persistence.xml]
+05 Feb 2016 08:19:30,634 [main]  INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:221 - Building JPA container EntityManagerFactory for persistence unit &apos;bookStore&apos;
+05 Feb 2016 08:19:30,989 [main]  INFO org.hibernate.annotations.common.Version:37 - Hibernate Commons Annotations 3.2.0.Final
+05 Feb 2016 08:19:31,014 [main]  INFO org.hibernate.cfg.Environment:593 - Hibernate 3.6.0.Final
+05 Feb 2016 08:19:31,018 [main]  INFO org.hibernate.cfg.Environment:626 - hibernate.properties not found
+05 Feb 2016 08:19:31,024 [main]  INFO org.hibernate.cfg.Environment:804 - Bytecode provider name : javassist
+05 Feb 2016 08:19:31,029 [main]  INFO org.hibernate.cfg.Environment:685 - using JDK 1.4 java.sql.Timestamp handling
+05 Feb 2016 08:19:31,177 [main]  INFO org.hibernate.ejb.Version:42 - Hibernate EntityManager 3.6.0.Final
+05 Feb 2016 08:19:31,205 [main]  INFO org.hibernate.ejb.Ejb3Configuration:519 - Processing PersistenceUnitInfo [
+	name: bookStore
+	...]
+05 Feb 2016 08:19:32,089 [main]  INFO org.hibernate.cfg.AnnotationBinder:532 - Binding entity from annotated class: org.bpmnwithactiviti.chapter6.jpa.Book
+05 Feb 2016 08:19:32,162 [main]  INFO org.hibernate.cfg.annotations.EntityBinder:519 - Bind entity org.bpmnwithactiviti.chapter6.jpa.Book on table Book
+05 Feb 2016 08:19:32,258 [main]  INFO org.hibernate.cfg.Configuration:1646 - Hibernate Validator not found: ignoring
+05 Feb 2016 08:19:32,310 [main]  INFO org.hibernate.cfg.search.HibernateSearchEventListenerRegister:75 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+05 Feb 2016 08:19:32,320 [main]  INFO org.hibernate.connection.DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+05 Feb 2016 08:19:32,321 [main]  INFO org.hibernate.connection.DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+05 Feb 2016 08:19:32,321 [main]  INFO org.hibernate.connection.DriverManagerConnectionProvider:68 - autocommit mode: true
+05 Feb 2016 08:19:32,321 [main]  INFO org.hibernate.connection.DriverManagerConnectionProvider:103 - using driver: org.h2.Driver at URL: jdbc:h2:mem:bookstore;DB_CLOSE_ON_EXIT=FALSE
+05 Feb 2016 08:19:32,322 [main]  INFO org.hibernate.connection.DriverManagerConnectionProvider:109 - connection properties: {user=sa, password=****, autocommit=true, release_mode=auto}
+05 Feb 2016 08:19:32,336 [main]  INFO org.hibernate.cfg.SettingsFactory:117 - Database -&gt;
+       name : H2
+    version : 1.2.132 (2010-03-21)
+      major : 1
+      minor : 2
+05 Feb 2016 08:19:32,337 [main]  INFO org.hibernate.cfg.SettingsFactory:123 - Driver -&gt;
+       name : H2 JDBC Driver
+    version : 1.2.132 (2010-03-21)
+      major : 1
+      minor : 2
+05 Feb 2016 08:19:32,395 [main]  INFO org.hibernate.dialect.Dialect:108 - Using dialect: org.hibernate.dialect.HSQLDialect
+05 Feb 2016 08:19:32,414 [main]  INFO org.hibernate.engine.jdbc.JdbcSupportLoader:79 - Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+05 Feb 2016 08:19:32,415 [main]  INFO org.hibernate.transaction.TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+05 Feb 2016 08:19:32,418 [main]  INFO org.hibernate.transaction.TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+05 Feb 2016 08:19:32,418 [main]  INFO org.hibernate.cfg.SettingsFactory:179 - Automatic flush during beforeCompletion(): disabled
+05 Feb 2016 08:19:32,419 [main]  INFO org.hibernate.cfg.SettingsFactory:183 - Automatic session close at end of transaction: disabled
+05 Feb 2016 08:19:32,419 [main]  INFO org.hibernate.cfg.SettingsFactory:190 - JDBC batch size: 15
+05 Feb 2016 08:19:32,419 [main]  INFO org.hibernate.cfg.SettingsFactory:193 - JDBC batch updates for versioned data: disabled
+05 Feb 2016 08:19:32,420 [main]  INFO org.hibernate.cfg.SettingsFactory:198 - Scrollable result sets: enabled
+05 Feb 2016 08:19:32,420 [main]  INFO org.hibernate.cfg.SettingsFactory:206 - JDBC3 getGeneratedKeys(): enabled
+05 Feb 2016 08:19:32,420 [main]  INFO org.hibernate.cfg.SettingsFactory:214 - Connection release mode: auto
+05 Feb 2016 08:19:32,421 [main]  INFO org.hibernate.cfg.SettingsFactory:241 - Default batch fetch size: 1
+05 Feb 2016 08:19:32,422 [main]  INFO org.hibernate.cfg.SettingsFactory:245 - Generate SQL with comments: disabled
+05 Feb 2016 08:19:32,422 [main]  INFO org.hibernate.cfg.SettingsFactory:249 - Order SQL updates by primary key: disabled
+05 Feb 2016 08:19:32,422 [main]  INFO org.hibernate.cfg.SettingsFactory:253 - Order SQL inserts for batching: disabled
+05 Feb 2016 08:19:32,422 [main]  INFO org.hibernate.cfg.SettingsFactory:431 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+05 Feb 2016 08:19:32,426 [main]  INFO org.hibernate.hql.ast.ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+05 Feb 2016 08:19:32,426 [main]  INFO org.hibernate.cfg.SettingsFactory:261 - Query language substitutions: {}
+05 Feb 2016 08:19:32,427 [main]  INFO org.hibernate.cfg.SettingsFactory:266 - JPA-QL strict compliance: enabled
+05 Feb 2016 08:19:32,427 [main]  INFO org.hibernate.cfg.SettingsFactory:271 - Second-level cache: enabled
+05 Feb 2016 08:19:32,427 [main]  INFO org.hibernate.cfg.SettingsFactory:275 - Query cache: disabled
+05 Feb 2016 08:19:32,427 [main]  INFO org.hibernate.cfg.SettingsFactory:406 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+05 Feb 2016 08:19:32,429 [main]  INFO org.hibernate.cfg.SettingsFactory:285 - Optimize cache for minimal puts: disabled
+05 Feb 2016 08:19:32,429 [main]  INFO org.hibernate.cfg.SettingsFactory:294 - Structured second-level cache entries: disabled
+05 Feb 2016 08:19:32,434 [main]  INFO org.hibernate.cfg.SettingsFactory:323 - Statistics: disabled
+05 Feb 2016 08:19:32,434 [main]  INFO org.hibernate.cfg.SettingsFactory:327 - Deleted entity synthetic identifier rollback: disabled
+05 Feb 2016 08:19:32,435 [main]  INFO org.hibernate.cfg.SettingsFactory:343 - Default entity-mode: pojo
+05 Feb 2016 08:19:32,435 [main]  INFO org.hibernate.cfg.SettingsFactory:347 - Named query checking : enabled
+05 Feb 2016 08:19:32,435 [main]  INFO org.hibernate.cfg.SettingsFactory:351 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+05 Feb 2016 08:19:32,482 [main]  INFO org.hibernate.impl.SessionFactoryImpl:200 - building session factory
+05 Feb 2016 08:19:32,863 [main]  INFO org.hibernate.impl.SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+05 Feb 2016 08:19:32,881 [main]  INFO org.hibernate.tool.hbm2ddl.SchemaExport:234 - Running hbm2ddl schema export
+05 Feb 2016 08:19:32,885 [main]  INFO org.hibernate.tool.hbm2ddl.SchemaExport:262 - exporting generated schema to database
+05 Feb 2016 08:19:32,911 [main]  INFO org.hibernate.tool.hbm2ddl.SchemaExport:281 - schema export complete
+05 Feb 2016 08:19:34,080 [main]  INFO org.activiti.engine.impl.ProcessEngineImpl:82 - ProcessEngine default created
+05 Feb 2016 08:19:34,169 [main] ERROR org.activiti.engine.impl.interceptor.CommandContext:121 - Error while closing command context
+java.lang.NullPointerException
+	at org.activiti.engine.impl.cmd.DeployCmd.deploymentsDiffer(DeployCmd.java:72)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:50)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:30)
+	at org.activiti.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:42)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:42)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:130)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:40)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+	at org.activiti.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:46)
+	at org.activiti.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:106)
+	at org.activiti.spring.SpringProcessEngineConfiguration.autoDeployResources(SpringProcessEngineConfiguration.java:142)
+	at org.activiti.spring.SpringProcessEngineConfiguration.buildProcessEngine(SpringProcessEngineConfiguration.java:61)
+	at org.activiti.spring.ProcessEngineFactoryBean.getObject(ProcessEngineFactoryBean.java:56)
+	at org.activiti.spring.ProcessEngineFactoryBean.getObject(ProcessEngineFactoryBean.java:32)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:142)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:102)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1414)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:245)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:349)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:973)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:879)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+05 Feb 2016 08:19:34,172 [main]  INFO org.springframework.beans.factory.support.DefaultSingletonBeanRegistry:422 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@31d4b3e8: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,activitiDataSource,persistenceUnitManager,entityManagerFactory,transactionManager,processEngineConfiguration,processEngine,repositoryService,runtimeService,taskService,historyService,managementService,formService,bookService]; root of factory hierarchy
+05 Feb 2016 08:19:34,173 [main]  INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:406 - Closing JPA EntityManagerFactory for persistence unit &apos;bookStore&apos;
+05 Feb 2016 08:19:34,173 [main]  INFO org.hibernate.impl.SessionFactoryImpl:925 - closing
+05 Feb 2016 08:19:34,173 [main]  INFO org.hibernate.tool.hbm2ddl.SchemaExport:234 - Running hbm2ddl schema export
+05 Feb 2016 08:19:34,175 [main]  INFO org.hibernate.tool.hbm2ddl.SchemaExport:262 - exporting generated schema to database
+05 Feb 2016 08:19:34,815 [main]  INFO org.hibernate.tool.hbm2ddl.SchemaExport:281 - schema export complete
+05 Feb 2016 08:19:34,815 [main]  INFO org.hibernate.connection.DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:h2:mem:bookstore;DB_CLOSE_ON_EXIT=FALSE
+05 Feb 2016 08:19:34,819 [main] ERROR org.springframework.test.context.TestContextManager:324 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@35841d6] to prepare test instance [org.bpmnwithactiviti.chapter6.jpa.JPABookTest@5e9ea380]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;processEngine&apos;: FactoryBean threw exception on object creation; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:149)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:102)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1414)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:245)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:349)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:973)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:879)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 31 more
+Caused by: java.lang.NullPointerException
+	at org.activiti.engine.impl.cmd.DeployCmd.deploymentsDiffer(DeployCmd.java:72)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:50)
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:30)
+	at org.activiti.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:42)
+	at org.activiti.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:42)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:130)
+	at org.activiti.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:40)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+	at org.activiti.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:46)
+	at org.activiti.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:106)
+	at org.activiti.spring.SpringProcessEngineConfiguration.autoDeployResources(SpringProcessEngineConfiguration.java:142)
+	at org.activiti.spring.SpringProcessEngineConfiguration.buildProcessEngine(SpringProcessEngineConfiguration.java:61)
+	at org.activiti.spring.ProcessEngineFactoryBean.getObject(ProcessEngineFactoryBean.java:56)
+	at org.activiti.spring.ProcessEngineFactoryBean.getObject(ProcessEngineFactoryBean.java:32)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:142)
+	... 51 more
+</system-out>
+  </testcase>
+</testsuite>
