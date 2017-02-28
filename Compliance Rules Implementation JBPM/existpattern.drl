@@ -1,0 +1,234 @@
+// created on: Dec 24, 2014
+package droolsexample
+
+// list any import classes here.
+import com.sample.Event;
+import com.sample.Comprules;
+import com.sample.DroolsTest;
+import java.math.BigDecimal;
+
+import com.sample.HelloCity;
+
+import function com.sample.Utility.helper;
+
+declare Event
+	@role(event)
+	//@timestamp(tistamp)
+end
+
+// declare any global variables here
+dialect "java"
+rule "exist pattern violation count is greater than multiplicity "
+   
+   when
+      Event ( $task : task, $ts : tistamp) from entry-point StoreOne
+       $comprules : Comprules ( pattern == "exist", scopestart == $task, $mul: multiplicity ) // original plan A
+    //  $comprules : Comprules ( pattern == "exist", $mul: multiplicity ) // plan B
+       
+      $total: Number( intValue > $mul )
+     from accumulate ( Event ( task == $comprules.antecedent, tistamp > $ts, $ant: task )
+      from entry-point StoreOne,count($ant))
+   
+   then
+      System.out.println("Exist pattern VIOLATION --> the antecedent count is GREATER THAN multiplicity ");
+     // System.out.println($task);
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end
+
+
+rule "First compliance requirement Exist pattern"
+   
+   when
+      Event ( $task : task, $ts : tistamp, $type : type, $pi : processinstance) from entry-point StoreOne
+       $comprules : Comprules ( pattern == "exist", scopestart == $type, $mul: multiplicity ) // original plan A
+    //  $comprules : Comprules ( pattern == "exist", $mul: multiplicity ) // plan B
+       
+      $total: Number( intValue > $mul )
+     from accumulate ( Event ( task == $comprules.antecedent, tistamp > $ts, type == $comprules.scopeend, processinstance == $pi, $ant: task )
+      from entry-point StoreOne,count($ant))
+   
+   then
+      System.out.println("Exist pattern VIOLATION --> the antecedent count is GREATER THAN multiplicity, Evaluate Loan request delegation happened more than once");
+     // System.out.println($task);
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end
+/*
+rule "exist pattern violation mult greater count"
+   
+   when
+      ev : Eventold (antecedent == Eventold.Antecedent.A,
+                       scopes == Eventold.ScopeStart.F,
+                       scopee == Eventold.ScopeEnd.E,
+                       multiplicity > count)
+   
+   then
+      System.out.println("Exist pattern VIOLATION --> multiplicity > count ");
+      helper(drools);
+end
+*/
+
+rule "Second compliance requirement Separation of duty pattern"
+   
+   when
+     
+     // plan A
+     $comprules : Comprules ( pattern == "separationofduty", $pa : plana, $pb : planb)
+       
+   $antone :  Event ( task == $pa, $res : resource) from entry-point StoreOne
+  exists  Event ( task == $pb , resource == $res) from entry-point StoreOne
+  
+   
+   then
+      System.out.println("Separation of duty violation --> Evaluate Loan Request task and prepare notification letter task occurrs with the same performer");
+     // System.out.println($task);
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end 
+
+rule "absence pattern violation "
+   
+   when
+      $comprules : Comprules ( pattern == "absence", $ant : antecedent)
+       
+    exists Event ( task == $ant)
+      from entry-point StoreOne
+   
+   then
+      System.out.println("absence pattern VIOLATION --> the antecedent is observed ");
+     // System.out.println($task);
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end
+
+/*
+rule "response pattern violation ant observed and no cons "
+   
+   when
+    //  Event ( $task : task)
+      // $comprules : Comprules ( pattern == "exist", scopestart == $task, $mul: multiplicity )
+      $comprules : Comprules ( pattern == "response", isBefore == false,  $ant : antecedent )
+       Event ( task == $ant ) from entry-point StoreOne
+       
+      $total: Number( intValue == 0 )
+     from accumulate ( Event ( task == $comprules.consequent, $cone: task )
+      from entry-point StoreOne,count($cone))
+   
+   then
+      System.out.println("response pattern VIOLATION --> the antecedent observed & the conseuent is not observed ");
+     // System.out.println($task);
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end */
+
+rule "response pattern violation ant observed and no cons "
+   
+   when
+    //  Event ( $task : task)
+      // $comprules : Comprules ( pattern == "exist", scopestart == $task, $mul: multiplicity )
+      Event ( $task : task, $ts : tistamp) from entry-point StoreOne
+      $comprules : Comprules ( pattern == "response", isBefore == false,  plana == $task, $pb : planb)
+       
+    //   $aone : Event ( task == $pa , $ts : tistamp, $task1 : task) from entry-point StoreOne
+     //  $atwo : Event ( task == $pb, $tst : tistamp, tistamp > $ts , $task2 : task ) from entry-point StoreOne
+     
+    exists Event ( task == $task) from entry-point StoreOne
+    not Event ( task == $pb, tistamp > $ts) from entry-point StoreOne
+     //  not Event ( task == $con ) from entry-point StoreOne
+       
+ //     $total: Number( intValue == 0 )
+ //    from accumulate ( Event ( task == $comprules.consequent, $cone: task )
+ //     from entry-point StoreOne,count($cone))
+   
+   then
+      System.out.println("response pattern VIOLATION --> the antecedent observed & the conseuent is not observed ");
+     // System.out.println($task);
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end
+
+
+rule "response pattern case 2 violation ant observed and cons observed but before time span "
+   
+   when
+    //  Event ( $task : task)
+      // $comprules : Comprules ( pattern == "exist", scopestart == $task, $mul: multiplicity )
+      $comprules : Comprules ( pattern == "responsesec", isBefore == false,  $pa : plana, $pb : planb ,$timespan : timespan)
+       
+    $aone : Event ( task == $pa) from entry-point StoreOne
+    $ctwo : Event ( task == $pb, this after [0m, 9m] $aone) from entry-point StoreOne
+     //  not Event ( task == $con ) from entry-point StoreOne
+       
+ //     $total: Number( intValue == 0 )
+ //    from accumulate ( Event ( task == $comprules.consequent, $cone: task )
+ //     from entry-point StoreOne,count($cone))
+   
+   then
+      System.out.println("response case 2 pattern VIOLATION --> the antecedent observed, the consequent is observed but before time span ");
+     // System.out.println($task);
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end
+
+rule "response pattern case 3 violation ant observed and withabs event ccured before cons"
+   
+   when
+    //  Event ( $task : task)
+      // $comprules : Comprules ( pattern == "exist", scopestart == $task, $mul: multiplicity )
+      $comprules : Comprules ( pattern == "responsethi", $pa : plana, $pb : planb, $wa : wa)
+       
+     Event ( task == $pa, $ts : tistamp) from entry-point StoreOne
+    $withabs : Event ( task == $wa , tistamp > $ts) from entry-point StoreOne
+   $contwo :  Event ( task == $pb, this after[0m] $withabs) from entry-point StoreOne
+     //  not Event ( task == $con ) from entry-point StoreOne
+       
+ //     $total: Number( intValue == 0 )
+ //    from accumulate ( Event ( task == $comprules.consequent, $cone: task )
+ //     from entry-point StoreOne,count($cone))
+   
+   then
+      System.out.println("response pattern case 3 VIOLATION --> the antecedent observed & with absence event occured before the consequent");
+     // System.out.println($task);
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end
+
+
+rule "one to one response violation 2 ante and no cons in between"
+   
+   when
+    //  Event ( $task : task)
+      // $comprules : Comprules ( pattern == "exist", scopestart == $task, $mul: multiplicity )
+   //   $comprules : Comprules ( pattern == "onetooneresponse", $pa : plana, $pb : planb)
+       
+ //   $one : Event ( task == $pa) from entry-point StoreOne
+ //  $two :  Event ( task == $pa, this meets $one) from entry-point StoreOne
+   
+   // plan B working but mosh awy 
+ //  $comprules : Comprules ( pattern == "onetooneresponse", $pa : plana, $wa : planb)
+       
+  //   Event ( task == $pa, $ts : tistamp) from entry-point StoreOne
+ //  $contwo  : Event ( task == $pa , tistamp > $ts) from entry-point StoreOne
+ // $withabs  :  Event ( task == $wa, this after[0m] $contwo) from entry-point StoreOne
+     
+     //  not Event ( task == $con ) from entry-point StoreOne
+     
+     // plan C
+     $comprules : Comprules ( pattern == "onetooneresponse", $pa : plana, $wa : planb)
+       
+   $conone :  Event ( task == $pa, $ts : tistamp) from entry-point StoreOne
+  $contwo  :  Event ( task == $pa , tistamp > $ts, this after[0m] $conone) from entry-point StoreOne
+  not  Event ( task == $wa, tistamp > $ts && < $contwo.tistamp) from entry-point StoreOne
+       
+ //     $total: Number( intValue == 0 )
+ //    from accumulate ( Event ( task == $comprules.consequent, $cone: task )
+ //     from entry-point StoreOne,count($cone))
+   
+   then
+      System.out.println("one to one response violation --> 2 antecedent occurs and no consequent in between");
+     // System.out.println($task);
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end 
+

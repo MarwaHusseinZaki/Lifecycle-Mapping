@@ -1,0 +1,45 @@
+// created on: Dec 24, 2014
+package droolsexample
+
+// list any import classes here.
+import com.sample.Eventold;
+import java.math.BigDecimal;
+
+import com.sample.HelloCity;
+
+import function com.sample.Utility.helper;
+
+// declare any global variables here
+dialect "java"
+rule "response pattern violation 1 "
+   
+   when
+      ev : Eventold ( pattern == Eventold.Pattern.response,
+      					consequent == Eventold.Consequent.B,
+      					antecedent == Eventold.Antecedent.A,
+                       scopes == Eventold.ScopeStart.F,
+                      scopee == Eventold.ScopeEnd.E,
+                       consimesptamp > anttimestamp,
+                       isBefore == true)
+   
+   then
+      System.out.println("Response pattern VIOLATION case 1 ");
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end
+
+rule "response pattern violation 2"
+   
+   when
+      ev : Eventold (pattern == Eventold.Pattern.response,
+      					consequent == Eventold.Consequent.B,
+      					antecedent == Eventold.Antecedent.A,
+                       scopes == Eventold.ScopeStart.F,
+                       scopee == Eventold.ScopeEnd.E,
+                       consimesptamp > anttimestamp,
+                       wa == Eventold.WA.X)
+   
+   then
+      System.out.println("Response pattern VIOLATION case 2");
+      helper(drools);
+end

@@ -1,0 +1,110 @@
+//created on: Jan 4, 2017
+package mapping
+
+//list any import classes here.
+import com.sample.Mevents;
+
+
+import function com.sample.Utility.helper;
+
+//declare any global variables here
+
+declare Mevents
+	@role(event)
+	//@timestamp(tistamp)
+end
+
+
+rule "Created Rule"
+
+    when
+        //conditions
+        $mevent : Mevents( task == "Created") from entry-point StoreOne
+      //  Mevents (task == "start")
+    then
+        //actions
+        System.out.println("throwing mapped event : Created ");
+        helper(drools);
+end
+
+rule " Reserved Rule"
+
+    when
+        //conditions
+        $mevent : Mevents( task == "Reserved") from entry-point StoreOne
+      //  Mevents (task == "start")
+    then
+        //actions
+        System.out.println("throwing mapped event : allocated ");
+        helper(drools);
+end
+
+rule " Ready Rule"
+
+    when
+        //conditions
+        $mevent : Mevents( task == "Ready") from entry-point StoreOne
+      //  Mevents (task == "start")
+    then
+        //actions
+        System.out.println("throwing mapped event : offered ");
+        helper(drools);
+end
+
+rule "inprogress Rule"
+
+    when
+        //conditions
+        $mevent : Mevents( task == "In Progress") from entry-point StoreOne
+      //  Mevents (task == "start")
+    then
+        //actions
+        System.out.println("throwing mapped event : started ");
+        helper(drools);
+end
+
+rule "suspended Rule"
+
+    when
+        //conditions
+        $mevent : Mevents( task == "Suspended") from entry-point StoreOne
+      //  Mevents (task == "start")
+    then
+        //actions
+        System.out.println("throwing mapped event : suspended ");
+        helper(drools);
+end
+
+rule "failed Rule"
+
+    when
+        //conditions
+        $mevent : Mevents( task == "Failed") from entry-point StoreOne
+      //  Mevents (task == "start")
+    then
+        //actions
+        System.out.println("throwing mapped event : failed ");
+        helper(drools);
+end
+
+rule "completed Rule"
+
+    when
+        //conditions
+        $mevent : Mevents( task == "Completed") from entry-point StoreOne
+      //  Mevents (task == "start")
+    then
+        //actions
+        System.out.println("throwing mapped event : completed ");
+        helper(drools);
+end
+
+/*
+rule "Your Second Rule"
+    //include attributes such as "salience" here...
+    when
+        //conditions
+    then
+        //actions
+
+end */

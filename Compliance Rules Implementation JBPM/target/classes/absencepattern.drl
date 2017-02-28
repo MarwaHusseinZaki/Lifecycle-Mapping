@@ -1,0 +1,28 @@
+// created on: Dec 24, 2014
+package droolsexample
+
+// list any import classes here.
+import com.sample.Eventold;
+import java.math.BigDecimal;
+
+import com.sample.HelloCity;
+
+import function com.sample.Utility.helper;
+
+// declare any global variables here
+dialect "java"
+rule "Absence pattern violation "
+   
+   when
+      ev : Eventold ( pattern == Eventold.Pattern.Absence,
+      					antecedent == Eventold.Antecedent.A,
+                       scopes == Eventold.ScopeStart.F,
+                       scopee == Eventold.ScopeEnd.E,
+                       count == 0)
+   
+   then
+      System.out.println("Absence pattern VIOLATION ");
+      //HelloCity.writeHello(item.getPurchaseCity().toString());
+      helper(drools);
+end
+

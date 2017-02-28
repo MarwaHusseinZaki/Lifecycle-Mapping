@@ -1,0 +1,39 @@
+//created on: Sep 17, 2016
+package com.sample
+
+//list any import classes here.
+import com.sample.Sale;
+
+
+//declare any global variables here
+declare Sale
+	@role(event)
+end
+
+
+
+rule "StoreOne- Has Passed its Sales Record"
+
+    when
+        //conditions
+        Number( $totalSalesAmount : intValue, intValue > 1000)
+        from accumulate ( Sale( $amount : amount, $quantity : quantity)
+        from entry-point StoreOne,sum($amount*$quantity))
+    then
+        //actions
+        System.out.println("StoreOne- Has Passed its Sales Record");
+
+end
+
+rule "StoreTwo- Has Passed its Sales Record"
+    //include attributes such as "salience" here...
+    when
+        //conditions
+        Number( $totalSalesAmount : intValue, intValue > 1000)
+        from accumulate ( Sale( $amount : amount, $quantity : quantity)
+        from entry-point StoreTwo,sum($amount*$quantity))
+    then
+        //actions
+        System.out.println("StoreTwo- Has Passed its Sales Record");
+
+end
